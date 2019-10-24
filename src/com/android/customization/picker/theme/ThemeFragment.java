@@ -609,6 +609,13 @@ public class ThemeFragment extends ToolbarFragment {
             }
 
             private void setWallpaperBitmap(View view, Bitmap bitmap) {
+                /* 'bitmap' is null when WallpapersBreel2019 crashes
+                 *  TODO: figure out why above app crashes. Log: https://del.dog/iwagarutad
+                 *  NOTE: we may need to decompile the apk to fix this crash */
+                if (bitmap == null) {
+                    Log.e(TAG, "Error loading wallpaper bitmap"); // this might spam the log
+                    return;
+                }
                 Resources res = view.getContext().getResources();
                 Drawable background = new BitmapDrawable(res, bitmap);
                 if (mIsTranslucent) {
