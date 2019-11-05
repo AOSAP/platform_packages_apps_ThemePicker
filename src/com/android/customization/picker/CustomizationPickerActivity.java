@@ -83,7 +83,7 @@ import java.util.Map;
  *  Fragments providing customization options.
  */
 public class CustomizationPickerActivity extends FragmentActivity implements WallpapersUiContainer,
-        CategoryFragmentHost, ThemeFragmentHost, GridFragmentHost, ClockFragmentHost {
+        CategoryFragmentHost, ThemeFragmentHost, GridFragmentHost, ClockFragmentHost, PermissionChangedListener {
 
     private static final String TAG = "CustomizationPickerActivity";
     private static final String WALLPAPER_FLAVOR_EXTRA = "com.android.launcher3.WALLPAPER_FLAVOR";
@@ -133,6 +133,9 @@ public class CustomizationPickerActivity extends FragmentActivity implements Wal
                     ? mBottomNav.getMenu().size() - 1 : 0;
                 navigateToSection(mBottomNav.getMenu().getItem(section).getItemId());
             }
+        }
+        if (!isReadExternalStoragePermissionGranted()) {
+            requestExternalStoragePermission(this);
         }
     }
 
@@ -409,6 +412,14 @@ public class CustomizationPickerActivity extends FragmentActivity implements Wal
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
         setResult(Activity.RESULT_OK);
         finish();
+    }
+
+    @Override
+    public void onPermissionsGranted() {
+    }
+
+    @Override
+    public void onPermissionsDenied(boolean dontAskAgain) {
     }
 
     /**
