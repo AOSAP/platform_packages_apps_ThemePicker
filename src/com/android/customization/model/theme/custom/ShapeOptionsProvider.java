@@ -16,7 +16,6 @@
 package com.android.customization.model.theme.custom;
 
 import static com.android.customization.model.ResourceConstants.ANDROID_PACKAGE;
-import static com.android.customization.model.ResourceConstants.CONFIG_CORNERRADIUS;
 import static com.android.customization.model.ResourceConstants.CONFIG_ICON_MASK;
 import static com.android.customization.model.ResourceConstants.OVERLAY_CATEGORY_SHAPE;
 import static com.android.customization.model.ResourceConstants.PATH_SIZE;

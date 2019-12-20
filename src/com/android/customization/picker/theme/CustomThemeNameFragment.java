@@ -133,7 +133,9 @@ public class CustomThemeNameFragment extends CustomThemeStepFragment {
         Context context = getContext();
         PreviewInfo previewInfo = mCustomThemeManager.buildCustomThemePreviewInfo(context);
         mCoverPage = new ThemeCoverPage(context, getThemeName(),
-                previewInfo.resolveAccentColor(getResources()), previewInfo.icons,
+                previewInfo.resolveAccentColor(getResources()),
+                previewInfo.resolvePrimaryColor(getResources()),
+                previewInfo.icons,
                 previewInfo.headlineFontFamily,
                 previewInfo.shapeDrawable, previewInfo.shapeAppIcons, null,
                 mColorButtonIds, mColorTileIds, mColorTileIconIds, mShapeIconIds,
