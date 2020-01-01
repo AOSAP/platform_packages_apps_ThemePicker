@@ -125,6 +125,7 @@ public class CustomThemeComponentFragment extends CustomThemeStepFragment {
                 }
                 mOptionsController.setSelectedOption(mSelectedOption);
             } else {
+                mSelectedOption = null;
                 mOptionsContainer.setVisibility(View.GONE);
                 mOptionsMessage.setVisibility(View.VISIBLE);
                 mOptionsMessage.setText(R.string.no_options_message);

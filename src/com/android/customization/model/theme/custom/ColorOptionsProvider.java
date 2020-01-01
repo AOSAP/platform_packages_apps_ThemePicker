@@ -127,8 +127,7 @@ public class ColorOptionsProvider extends ThemeComponentOptionProvider<ColorOpti
                     r.getIdentifier(ACCENT_COLOR_DARK_NAME, "color", mDefaultThemePackage),
                     null);
         } catch (NotFoundException | NameNotFoundException e) {
-            Log.d(TAG, "Didn't find default color, will use system option", e);
-
+            Log.d(TAG, "Didn't find default color, will use system option");
             lightColor = system.getColor(
                     system.getIdentifier(ACCENT_COLOR_LIGHT_NAME, "color", ANDROID_PACKAGE), null);
 
