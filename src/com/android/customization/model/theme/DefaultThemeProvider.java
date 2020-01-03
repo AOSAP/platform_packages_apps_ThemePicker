@@ -96,7 +96,7 @@ public class DefaultThemeProvider extends ResourcesApkProvider implements ThemeB
     private static final String THEME_ID_FIELD = "_theme_id";
 
     // Maximum number of themes allowed (including default, pre-bundled and custom)
-    private static final int MAX_TOTAL_THEMES = 10;
+    private static final int MAX_TOTAL_THEMES = 99;
 
     private final OverlayThemeExtractor mOverlayProvider;
     private List<ThemeBundle> mThemes;
