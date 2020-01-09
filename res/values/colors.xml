@@ -21,7 +21,8 @@
     <color name="white_14_alpha">#24FFFFFF</color>
     <color name="google_grey700">#5f6368</color>
     <color name="google_grey900">#202124</color>
-
+    <color name="material_grey_100">#fff5f5f5</color>
+    <color name="material_grey_200">#ffeeeeee</color>
     <color name="status_bar_color">#ffffffff</color>
 
     <color name="system_navigation_bar_background">@android:color/white</color>
@@ -67,4 +68,5 @@
 
     <color name="color_primary_dark">@*android:color/primary_dark_device_default_settings_light</color>
     <color name="color_primary">@*android:color/primary_device_default_settings_light</color>
+    <color name="preview_pager_bg_color">@color/material_grey_200</color>
 </resources>

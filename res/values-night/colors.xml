@@ -46,4 +46,6 @@
 
     <color name="color_primary">@*android:color/primary_device_default_settings</color>
     <color name="color_primary_dark">@*android:color/primary_dark_device_default_settings</color>
+    <color name="preview_pager_bg_color">@color/color_primary_dark</color>
+
 </resources>

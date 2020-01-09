@@ -30,6 +30,7 @@ import android.graphics.Path;
 import android.graphics.Typeface;
 import android.graphics.drawable.AdaptiveIconDrawable;
 import android.graphics.drawable.Drawable;
+import android.graphics.drawable.RippleDrawable;
 import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.PathShape;
 import android.icu.text.SimpleDateFormat;
@@ -124,7 +125,11 @@ public class ThemeBundle implements CustomizationOption<ThemeBundle> {
             ((ImageView) view.findViewById(R.id.theme_option_icon)).setImageDrawable(
                     icon);
         }
-        view.setBackgroundColor(mPreviewInfo.colorPrimary);
+        RippleDrawable previewBackground = (RippleDrawable) view.getBackground();
+        Drawable d = res.getDrawable(R.drawable.option_background);
+        d.setTint(mPreviewInfo.colorPrimary);
+        previewBackground.setDrawableByLayerId(R.id.background, d);
+        view.setBackground(previewBackground);
         view.setContentDescription(getContentDescription(view.getContext()));
     }
 
