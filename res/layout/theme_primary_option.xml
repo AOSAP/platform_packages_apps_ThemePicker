@@ -18,18 +18,22 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    android:padding="8dp">
-
-    <ImageView
-        android:layout_width="@dimen/component_color_chip_container_size"
-        android:layout_height="@dimen/component_color_chip_container_size"
-        android:layout_gravity="center"
-        android:src="@drawable/color_chip_bg"/>
+    android:paddingTop="16dp"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp"
+    android:paddingBottom="0dp" >
 
     <ImageView
         android:id="@+id/option_tile"
         android:layout_width="@dimen/component_color_chip_size"
         android:layout_height="@dimen/component_color_chip_size"
         android:layout_gravity="center"
-        android:src="@drawable/color_chip"/>
+        android:src="@drawable/color_chip_filled"/>
+
+    <ImageView
+        android:layout_width="@dimen/component_color_chip_size"
+        android:layout_height="@dimen/component_color_chip_size"
+        android:layout_gravity="center"
+        android:src="@drawable/color_chip_bg"/>
+
 </FrameLayout>
