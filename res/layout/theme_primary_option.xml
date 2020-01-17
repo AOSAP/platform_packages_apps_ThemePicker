@@ -34,6 +34,6 @@
         android:layout_width="@dimen/component_color_chip_size"
         android:layout_height="@dimen/component_color_chip_size"
         android:layout_gravity="center"
-        android:src="@drawable/color_chip_bg"/>
+        android:src="@drawable/color_chip_selector"/>
 
 </FrameLayout>
